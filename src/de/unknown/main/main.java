@@ -3,11 +3,11 @@ package de.unknown.main;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import de.unknown.commands.Spawn;
 import de.unknown.configapi.GetDefaultFiles;
 import de.unknown.configapi.SpawnConfig;
 import de.unknown.listener.onInventoryClickSpawn;
 import de.unknown.listener.onJoin;
-import de.unkown.commands.Spawn;
 
 
 public class main extends JavaPlugin{

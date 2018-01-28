@@ -1,4 +1,4 @@
-package de.unkown.commands;
+package de.unknown.commands;
 
 
 import java.util.ArrayList;
