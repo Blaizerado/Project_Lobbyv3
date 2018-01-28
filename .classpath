@@ -4,5 +4,6 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="api"/>
 	<classpathentry kind="lib" path="C:/Users/Jeremy/Desktop/Bungee/Source Server#/craftbukkit.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Jeremy/Desktop/TitleAPI-1.7.5.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

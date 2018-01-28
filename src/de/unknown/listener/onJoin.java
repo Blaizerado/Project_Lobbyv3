@@ -6,6 +6,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 
 import de.unknown.api.ArrayListAPI;
+import de.unknown.api.SetSpawnItems;
 import de.unknown.api.SpawnHasMap;
 
 public class onJoin extends ArrayListAPI implements Listener {
@@ -19,6 +20,7 @@ public class onJoin extends ArrayListAPI implements Listener {
 		if(!isPlayerInLobby(p)) {
 			addPlayer(p);
 			setLocation(p);
+			SetSpawnItems.setInventoryItems(p);
 		}
 	}
 }

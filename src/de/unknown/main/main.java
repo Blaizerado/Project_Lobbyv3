@@ -3,9 +3,11 @@ package de.unknown.main;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import de.unknown.commands.Install;
 import de.unknown.commands.Spawn;
 import de.unknown.configapi.GetDefaultFiles;
 import de.unknown.configapi.SpawnConfig;
+import de.unknown.listener.onInterAcct;
 import de.unknown.listener.onInventoryClickSpawn;
 import de.unknown.listener.onJoin;
 
@@ -39,6 +41,7 @@ public class main extends JavaPlugin{
 		VIPSpawn = getConfig().getBoolean("Config.VIPSpawn");
 		AdminSpawn = getConfig().getBoolean("Config.AdminSpawn");
 		Prefix = getConfig().getString("Config.Prefix");
+		
 		GetDefaultFiles.loadFiles();
 		SpawnConfig.loadSpawnLocation();
 	}
@@ -47,9 +50,14 @@ public class main extends JavaPlugin{
 		//Listener
 		pm.registerEvents(new onJoin(), this);
 		pm.registerEvents(new onInventoryClickSpawn(), this);
+		pm.registerEvents(new onInventoryClickInstall(), this);
+		pm.registerEvents(new onInterAcct(), this);
 		//Commands
 		Spawn cSpawn = new Spawn();
 		getCommand("spawn").setExecutor(cSpawn);
+		
+		Install cInstall = new Install(this);
+		getCommand("install").setExecutor(cInstall);
 		//Instancen
 		new SpawnConfig(this);
 	}

@@ -7,3 +7,6 @@ commands:
      spawn:
           description: Shows MySQL Information
           usage: </command>
+     install:
+          description: Shows MySQL Information
+          usage: </command>       
