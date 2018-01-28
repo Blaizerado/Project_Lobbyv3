@@ -1,4 +1,9 @@
 main: de.unknown.main.main
 name: Project_Lobby
 author: Unknown
-version: 0.0.2
+version: 0.0.3
+
+commands:
+     spawn:
+          description: Shows MySQL Information
+          usage: </command>

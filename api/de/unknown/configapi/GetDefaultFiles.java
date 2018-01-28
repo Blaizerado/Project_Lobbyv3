@@ -9,7 +9,7 @@ public class GetDefaultFiles extends FileHasMap{
 	
 	
 	public static void loadFiles() {
-		File file = new File("plugins/Project_Lobby/MetaData","DE.yml");
+		File file = new File("plugins/Project_Lobby/MetaData","Spawndata.yml");
 		
 		addFile("Spawn", file);
 	}

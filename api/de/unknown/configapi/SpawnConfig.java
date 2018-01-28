@@ -39,7 +39,7 @@ public class SpawnConfig extends SpawnHasMap{
 				}else {Bukkit.getConsoleSender().sendMessage("§cAchtung es wurde noch kein VIPSpawn festgestellt!");}
 			}
 			if(main.AdminSpawn) {
-				if(!cfg.getString("Config.VIPSpawn").equalsIgnoreCase("default")) {
+				if(!cfg.getString("Config.TeamSpawn").equalsIgnoreCase("default")) {
 					addLocation("AdminSpawn", (Location)cfg.get("Config.TeamSpawn"));
 				}else {Bukkit.getConsoleSender().sendMessage("§cAchtung es wurde noch kein AdminSpawn festgestellt!");}
 			}
