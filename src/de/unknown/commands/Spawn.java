@@ -14,6 +14,7 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
 import de.unknown.api.SetSpawn;
+import de.unknown.main.main;
 
 public class Spawn extends SetSpawn implements CommandExecutor {
 
@@ -35,7 +36,9 @@ public class Spawn extends SetSpawn implements CommandExecutor {
 				setLocation(p);
 			}
 		}else if(args.length == 1) {
-			
+			if(!p.hasPermission("lobby.spawn")) {
+				p.sendMessage( main.Prefix + "§cAchtung der Zugriff auf diesen Command wurde verweigert!");
+			}
 			ArrayList<String>Loren = new ArrayList<>();
 			Inventory inv = Bukkit.createInventory(null, 9,"§6Spawns");
 			

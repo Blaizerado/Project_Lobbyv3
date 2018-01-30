@@ -1,7 +1,7 @@
 main: de.unknown.main.main
 name: Project_Lobby
 author: Unknown
-version: 0.0.5
+version: 0.0.6
 
 commands:
      spawn:
@@ -9,4 +9,11 @@ commands:
           usage: </command>
      install:
           description: Shows MySQL Information
-          usage: </command>       
+          usage: </command>
+     gm:
+          description: Shows MySQL Information
+          usage: </command>
+          aliases: [gamemode]
+     settings:
+          description: Shows MySQL Information
+          usage: </command>            

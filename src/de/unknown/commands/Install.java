@@ -19,15 +19,14 @@ public class Install implements CommandExecutor {
 		this.main = main;
 	}
 
-	@SuppressWarnings("deprecation")
+	@SuppressWarnings({ "deprecation", "static-access" })
 	@Override
 	public boolean onCommand(CommandSender sender, Command arg1, String arg2, String[] args) {
 		final Player p = (Player) sender;
+		if(!p.hasPermission("lobby.install")) {p.sendMessage( main.Prefix + "§cAchtung der Zugriff auf diesen Command wurde verweigert!"); return true;}
 		if(args.length == 0) {
 			TitleAPI.sendFullTitle(p, 40, 40, 40, "§c§k[§6Project_Lobby§c§k]", "§cDanke, dass du Project_Lobby benutzt!");
 			Bukkit.getScheduler().runTaskLater(main, new Runnable() {
-				
-				@SuppressWarnings("static-access")
 				@Override
 				public void run() {
 					SetSpawnItems.createItem(p);
