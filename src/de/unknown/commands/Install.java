@@ -24,7 +24,7 @@ public class Install implements CommandExecutor {
 		final Player p = (Player) sender;
 		if(!p.hasPermission("lobby.install")) {p.sendMessage( main.Prefix + "§cAchtung der Zugriff auf diesen Command wurde verweigert!"); return true;}
 		if(args.length == 0) {
-			CraftTitleAPI.sendFullTitle(p, 40, 40, 40, "§c§k[§6Project_Lobby§c§k]", "§cDanke das du Project_Lobby nutzt!");
+			CraftTitleAPI.sendFullTitle(p, 40, 40, 40, "§c§k[§6Project_Lobby§c§k]", "§cDanke, dass du Project_Lobby benutzt!");
 			Bukkit.getScheduler().runTaskLater(main, new Runnable() {
 				@Override
 				public void run() {

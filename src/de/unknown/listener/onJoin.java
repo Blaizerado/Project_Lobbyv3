@@ -20,6 +20,7 @@ public class onJoin extends ArrayListAPI implements Listener {
 		if(!isPlayerInLobby(p)) {
 			addPlayer(p);
 			setLocation(p);
+			SetSpawnItems.SetRevergeItems(p);
 			SetSpawnItems.setInventoryItems(p);
 		}
 	}

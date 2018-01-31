@@ -143,14 +143,4 @@ public static void sendTabTitle(Player player, String header, String footer) {
   /*Server server = main.getServer();
   main.getConfig().options().copyDefaults(true);
   main.saveConfig();*/
-
-@EventHandler
-public void onPlayerJoin(PlayerJoinEvent event) {
-  if (main.getConfig().getBoolean("Title On Join")) {
-    sendTitle(event.getPlayer(), Integer.valueOf(20), Integer.valueOf(50), Integer.valueOf(20), main.getConfig().getString("Title Message"), main.getConfig().getString("Subtitle Message"));
-  }
-
-  if (main.getConfig().getBoolean("Tab Header Enabled"))
-    sendTabTitle(event.getPlayer(), main.getConfig().getString("Tab Header Message"), main.getConfig().getString("Tab Footer Message"));
-}
 }

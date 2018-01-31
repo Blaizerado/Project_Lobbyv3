@@ -1,6 +1,5 @@
 package de.unknown.main;
 
-import org.bukkit.World;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -11,8 +10,11 @@ import de.unknown.commands.Settings;
 import de.unknown.commands.Spawn;
 import de.unknown.configapi.GetDefaultFiles;
 import de.unknown.configapi.SpawnConfig;
+import de.unknown.listener.onBuildEvent;
+import de.unknown.listener.onDropEvent;
 import de.unknown.listener.onFoodChange;
 import de.unknown.listener.onInterAcct;
+import de.unknown.listener.onInventoryClickDefault;
 import de.unknown.listener.onInventoryClickSettings;
 import de.unknown.listener.onInventoryClickSpawn;
 import de.unknown.listener.onJoin;
@@ -108,6 +110,10 @@ public class main extends JavaPlugin{
 		pm.registerEvents(new onInventoryClickSettings(this), this);
 		pm.registerEvents(new onFoodChange(), this);
 		pm.registerEvents(new CraftTitleAPI(this), this);
+		pm.registerEvents(new onBuildEvent(), this);
+		pm.registerEvents(new onDropEvent(), this);
+		pm.registerEvents(new onInventoryClickDefault(), this);
+		
 		//Commands
 		Settings cSettings = new Settings();
 		getCommand("settings").setExecutor(cSettings);

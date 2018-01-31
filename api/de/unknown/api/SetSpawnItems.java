@@ -73,6 +73,7 @@ public class SetSpawnItems extends FileHasMap{
 		YamlConfiguration cfg = YamlConfiguration.loadConfiguration(f);
 		if(f.exists()) {
 			if(cfg.getInt("Config.Inventory.slot") != 0) {
+				p.getInventory().clear();
 				ItemStack i = new ItemStack(Material.COMPASS);
 				ItemMeta im = (ItemMeta) i.getItemMeta();
 				im.setDisplayName("§cTeleporter§8(§3Rechtsklick§8)");
