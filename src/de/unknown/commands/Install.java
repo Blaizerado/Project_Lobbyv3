@@ -6,10 +6,9 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-import com.connorlinfoot.titleapi.TitleAPI;
-
 import de.unknown.api.SetSpawnItems;
 import de.unknown.main.main;
+import de.unknown.titleAPI.CraftTitleAPI;
 
 public class Install implements CommandExecutor {
 
@@ -25,7 +24,7 @@ public class Install implements CommandExecutor {
 		final Player p = (Player) sender;
 		if(!p.hasPermission("lobby.install")) {p.sendMessage( main.Prefix + "§cAchtung der Zugriff auf diesen Command wurde verweigert!"); return true;}
 		if(args.length == 0) {
-			TitleAPI.sendFullTitle(p, 40, 40, 40, "§c§k[§6Project_Lobby§c§k]", "§cDanke, dass du Project_Lobby benutzt!");
+			CraftTitleAPI.sendFullTitle(p, 40, 40, 40, "§c§k[§6Project_Lobby§c§k]", "§cDanke das du Project_Lobby nutzt!");
 			Bukkit.getScheduler().runTaskLater(main, new Runnable() {
 				@Override
 				public void run() {

@@ -16,6 +16,7 @@ import de.unknown.listener.onInterAcct;
 import de.unknown.listener.onInventoryClickSettings;
 import de.unknown.listener.onInventoryClickSpawn;
 import de.unknown.listener.onJoin;
+import de.unknown.titleAPI.CraftTitleAPI;
 import net.md_5.bungee.api.ChatColor;
 
 
@@ -29,7 +30,7 @@ public class main extends JavaPlugin{
 	public static Boolean FoodChange;
 	public static Boolean TimeLock;
 	public static Long worldTime;
-	public static World world;
+	public static String world;
 	@Override
 	public void onEnable() {
 		loadListener(getServer().getPluginManager());
@@ -64,9 +65,7 @@ public class main extends JavaPlugin{
 		FoodChange = getConfig().getBoolean("Config.FoodLock");
 		TimeLock = getConfig().getBoolean("Config.TimeLock");
 		worldTime = getConfig().getLong("Config.Worldtime");
-		if(!getConfig().getString("Config.World").equalsIgnoreCase("default")) {
-			world = (World) getConfig().get("Config.World");
-		}
+		world = getConfig().getString("Config.World");
 		
 		GetDefaultFiles.loadFiles();
 		SpawnConfig.loadSpawnLocation();
@@ -108,7 +107,7 @@ public class main extends JavaPlugin{
 		pm.registerEvents(new onInterAcct(), this);
 		pm.registerEvents(new onInventoryClickSettings(this), this);
 		pm.registerEvents(new onFoodChange(), this);
-		
+		pm.registerEvents(new CraftTitleAPI(this), this);
 		//Commands
 		Settings cSettings = new Settings();
 		getCommand("settings").setExecutor(cSettings);

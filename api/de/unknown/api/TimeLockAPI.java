@@ -20,7 +20,7 @@ public class TimeLockAPI {
 			@Override
 			public void run() {
 				if(main.TimeLock) {
-					main.world.setFullTime(main.worldTime);
+					Bukkit.getWorld(main.world).setFullTime(main.worldTime);
 				}
 			}
 		}, 0L, 20*60);

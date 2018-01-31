@@ -68,7 +68,7 @@ public class onInventoryClickSettings extends InventoryAPI implements Listener {
 					creatInventory(e.getInventory(), p, 2);
 					p.updateInventory();
 					main.worldTime = p.getWorld().getTime();
-					main.world = p.getWorld();
+					main.world = p.getWorld().getName();
 					main.setConfig("WorldTime");
 					main.setConfig("World");
 					main.setConfig("Time");
