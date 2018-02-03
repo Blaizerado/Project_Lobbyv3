@@ -5,16 +5,15 @@ import java.lang.reflect.Field;
 
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
-import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
-import org.bukkit.event.player.PlayerJoinEvent;
 
 import de.unknown.main.main;
 import net.md_5.bungee.api.ChatColor;
 
 public class CraftTitleAPI implements Listener
 {
-    private main main;
+    @SuppressWarnings("unused")
+	private main main;
 
 	public CraftTitleAPI(main main) {
 		this.main = main;

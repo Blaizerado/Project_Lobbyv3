@@ -74,6 +74,28 @@ public class onInventoryClickSettings extends InventoryAPI implements Listener {
 					main.setConfig("Time");
 					sendTimeMessage(p);
 				break;
+				case "§2Weiter":
+					creatInventory(e.getInventory(), p, 4);
+					p.updateInventory();
+				break;
+				case "§cZurück":
+					creatInventory(e.getInventory(), p, 2);
+					p.updateInventory();
+				break;
+				case "§3PVP":
+					setPvP();
+					sendPVPMessage(p);
+					creatInventory(e.getInventory(), p, 4);
+					p.updateInventory();
+					main.setConfig("PvP");
+				break;
+				case "§3Joinen":
+					setJoin();
+					sendJoinMessage(p);
+					creatInventory(e.getInventory(), p, 4);
+					p.updateInventory();
+					main.setConfig("Join");
+				break;
 			}
 		}
 	}

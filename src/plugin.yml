@@ -16,4 +16,7 @@ commands:
           aliases: [gamemode]
      settings:
           description: Shows MySQL Information
-          usage: </command>            
+          usage: </command>
+     team:
+          description: Shows MySQL Information
+          usage: </command>                 
