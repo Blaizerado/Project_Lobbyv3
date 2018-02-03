@@ -20,6 +20,7 @@ import de.unknown.listener.onChat;
 import de.unknown.listener.onDropEvent;
 import de.unknown.listener.onFoodChange;
 import de.unknown.listener.onInterAcct;
+import de.unknown.listener.onInventoryCLickPermission;
 import de.unknown.listener.onInventoryClickDefault;
 import de.unknown.listener.onInventoryClickInstall;
 import de.unknown.listener.onInventoryClickSettings;
@@ -154,6 +155,7 @@ public class main extends JavaPlugin{
 		pm.registerEvents(new onPickItem(), this);
 		pm.registerEvents(new onTnT(), this);
 		pm.registerEvents(new onChat(), this);
+		pm.registerEvents(new onInventoryCLickPermission(), this);
 		//Commands
 		Permisson cPermission = new Permisson(this);
 		getCommand("team").setExecutor(cPermission);
